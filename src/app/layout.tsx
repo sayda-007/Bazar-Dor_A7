@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import PriceTicker from "@/components/PriceTicker";
 
+export const instant = false;
+
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +26,7 @@ export default function RootLayout({
     <html lang="bn">
       <body>
         <Navbar />
+        <PriceTicker />
         {children}
       </body>
     </html>
