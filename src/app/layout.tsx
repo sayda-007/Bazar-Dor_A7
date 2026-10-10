@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import PriceTicker from "@/components/PriceTicker";
+import { Toaster } from "react-hot-toast";
+
 
 export const instant = false;
 
