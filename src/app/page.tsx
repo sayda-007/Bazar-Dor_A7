@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import { getProducts } from "@/lib/api";
@@ -25,17 +26,17 @@ function ProductSection({
       id={id}
       className="mx-auto max-w-6xl scroll-mt-32 px-4 py-10 sm:px-6 sm:py-14"
     >
-      <div className="mb-6 flex flex-col gap-2 sm:mb-8">
+      <div className="mb-6">
         <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl">
           {title}
         </h2>
-        <p className="text-sm leading-6 text-text-muted sm:text-base">
+        <p className="mt-2 text-sm leading-6 text-text-muted sm:text-base">
           {subtitle}
         </p>
       </div>
 
       {products.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -80,15 +81,17 @@ export default async function Home() {
             <h2 className="text-xl font-bold text-foreground">
               পণ্যের তথ্য লোড করা যায়নি
             </h2>
+
             <p className="mt-2 text-sm text-text-muted">
               API সংযোগে সমস্যা হয়েছে। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন।
             </p>
-            <a
+
+            <Link
               href="/"
               className="mt-5 inline-flex rounded-lg bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark"
             >
               আবার চেষ্টা করুন
-            </a>
+            </Link>
           </div>
         </section>
       ) : (
@@ -96,18 +99,18 @@ export default async function Home() {
           <ProductSection
             id="price-risers"
             title="আজ দাম বেড়েছে ▲"
-            subtitle="যেসব পণ্যের দাম গত দিনের তুলনায় সবচেয়ে বেশি বেড়েছে।"
+            subtitle="গত দিনের তুলনায় যেসব পণ্যের দাম সবচেয়ে বেশি বেড়েছে।"
             products={risers}
-            emptyMessage="এই মুহূর্তে দাম বেড়েছে এমন কোনো পণ্য পাওয়া যায়নি।"
+            emptyMessage="দাম বেড়েছে এমন কোনো পণ্য পাওয়া যায়নি।"
           />
 
           <div className="border-y border-border bg-surface-soft">
             <ProductSection
               id="price-fallers"
               title="আজ দাম কমেছে ▼"
-              subtitle="যেসব পণ্যের দাম গত দিনের তুলনায় সবচেয়ে বেশি কমেছে।"
+              subtitle="গত দিনের তুলনায় যেসব পণ্যের দাম সবচেয়ে বেশি কমেছে।"
               products={fallers}
-              emptyMessage="এই মুহূর্তে দাম কমেছে এমন কোনো পণ্য পাওয়া যায়নি।"
+              emptyMessage="দাম কমেছে এমন কোনো পণ্য পাওয়া যায়নি।"
             />
           </div>
 
@@ -124,14 +127,16 @@ export default async function Home() {
       <footer className="border-t border-border bg-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 sm:px-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-lg font-extrabold text-brand">বাজার দর</p>
+            <p className="text-lg font-extrabold text-brand">
+              বাজার দর
+            </p>
             <p className="mt-1 text-sm text-text-muted">
               প্রয়োজনীয় পণ্যের দাম এক নজরে।
             </p>
           </div>
 
           <p className="max-w-xl text-sm leading-6 text-text-muted md:text-right">
-            সকল দাম সম্ভাব্য; বাজার অবস্থার ওপর নির্ভর করে পরিবর্তিত হয়।
+            সকল দাম সম্ভাব্য; বাজারের অবস্থার ওপর নির্ভর করে পরিবর্তিত হয়।
           </p>
         </div>
       </footer>
