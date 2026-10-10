@@ -1,7 +1,9 @@
-
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import PriceTicker from "@/components/PriceTicker";
+
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bn">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
