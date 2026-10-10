@@ -2,7 +2,7 @@
 import type { Category, Product } from "./types";
 
 export const API_BASE_URL =
-    "https://api.abcz.workers.dev/api/bazardor";
+  "https://openapi.programming-hero.com/api/bazardor";
 
 function extractArray<T>(payload: unknown, endpoint: string): T[] {
     if (Array.isArray(payload)) {
