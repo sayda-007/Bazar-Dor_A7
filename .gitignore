@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local authentication database
+database.sqlite
+database.sqlite-shm
+database.sqlite-wal
+
+# Local environment secrets
+.env.local
