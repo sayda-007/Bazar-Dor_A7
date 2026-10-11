@@ -6,7 +6,7 @@ Bazar Dor is a responsive price-comparison web application that helps users expl
 ## Project Links
 
 - **GitHub Repository:** https://github.com/sayda-007/Bazar-Dor_A7
-- **Live Website:** Pending deployment
+- **Live Website:** 
 
 ## Features
 
