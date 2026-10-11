@@ -53,9 +53,9 @@ function extractArray<T>(payload: unknown, endpoint: string): T[] {
 }
 
 async function fetchCollection<T>(endpoint: string): Promise<T[]> {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-        cache: "no-store",
-    });
+  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+    next: { revalidate: 60 },
+});
 
     if (!response.ok) {
         throw new Error(
