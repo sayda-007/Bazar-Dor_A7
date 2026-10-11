@@ -12,14 +12,13 @@ import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 
 
-
-export const instant = false;
-
 type Props = {
     params: Promise<{ slug: string }>;
 };
 
-const { slug } = await params;
+export default async function ProductDetailsPage({ params }: Props) {
+    const { slug } = await params;
+    
 
 const session = await auth.api.getSession({
     headers: await headers(),

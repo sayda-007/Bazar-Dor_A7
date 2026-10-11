@@ -27,7 +27,10 @@ export default async function CategoryPage({
         <h1 className="text-2xl font-bold">
           ক্যাটাগরির তথ্য লোড করা যায়নি
         </h1>
-        <Link href="/" className="mt-5 inline-block text-brand underline">
+        <Link
+          href="/"
+          className="mt-5 inline-block text-brand underline"
+        >
           হোম পেজে ফিরে যান
         </Link>
       </main>
@@ -52,7 +55,10 @@ export default async function CategoryPage({
         <h1 className="text-2xl font-bold">
           পণ্যের তথ্য লোড করা যায়নি
         </h1>
-        <Link href="/" className="mt-5 inline-block text-brand underline">
+        <Link
+          href="/"
+          className="mt-5 inline-block text-brand underline"
+        >
           হোম পেজে ফিরে যান
         </Link>
       </main>
@@ -66,12 +72,17 @@ export default async function CategoryPage({
   return (
     <main className="min-h-screen">
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-muted">
+        <nav
+          aria-label="Breadcrumb"
+          className="mb-6 text-sm text-text-muted"
+        >
           <Link href="/" className="hover:text-brand">
             হোম
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-foreground">{category.nameBn}</span>
+          <span className="text-foreground">
+            {category.nameBn}
+          </span>
         </nav>
 
         <div className="mb-8 rounded-3xl border border-border bg-brand-light p-6 sm:p-8">
@@ -84,9 +95,11 @@ export default async function CategoryPage({
               <p className="text-sm font-semibold text-brand">
                 পণ্যের ক্যাটাগরি
               </p>
+
               <h1 className="mt-1 text-3xl font-extrabold text-foreground sm:text-4xl">
                 {category.nameBn}
               </h1>
+
               <p className="mt-2 text-sm text-text-muted">
                 মোট {filteredProducts.length}টি পণ্যের আজকের দাম দেখুন।
               </p>
