@@ -10,6 +10,13 @@ import { authClient } from "@/lib/auth-client";
 const categoryLinks = [
   { label: "সব পণ্য", href: "/#all-products", activePath: "/" },
   { label: "চাল", href: "/category/chal", activePath: "/category/chal" },
+  { label: "ডাল", href: "/category/dal", activePath: "/category/dal" },
+  { label: "তেল", href: "/category/tel", activePath: "/category/tel" },
+  { label: "সবজি", href: "/category/sobji", activePath: "/category/sobji" },
+  { label: "মাছ", href: "/category/mach", activePath: "/category/mach" },
+  { label: "মাংস", href: "/category/mangsho", activePath: "/category/mangsho" },
+  { label: "ডিম-দুধ", href: "/category/dim-dui", activePath: "/category/dim-dui" },
+  { label: "মসলা", href: "/category/mosla", activePath: "/category/mosla" },
 ];
 
 export default function Navbar() {
